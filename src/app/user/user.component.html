@@ -1,0 +1,34 @@
+<div class="container mt-5" >
+  <div class="card text-center" style="padding: 20px; width: 60%; margin-left: auto; margin-right: auto">
+    <h1>{{user.userName}}</h1>
+    <img class="rounded float-start"  src="{{user.userPic}}" height="200px" width="200px" style="margin-right: auto; margin-left: auto">
+    <p class="mt-2"> Gender: {{user.gender}} </p>
+
+
+
+    <div class="row justify-content-center">
+      <div  class="col-4 card">
+        Posts added by user
+        <div class="card mb-1"  *ngFor="let posts of post">
+
+          <h4 > <a [routerLink]="['/post', posts.postId]">{{posts.postTitle}}</a> </h4>
+          <p>{{posts.postDescription}}</p>
+
+          <p>Vote count: {{posts.voteCount}} </p>
+
+        </div>
+      </div>
+      <div class="col-4 card">
+        Comments added by user
+
+        <div class="card mb-1" *ngFor="let comments of comments">
+          <p>{{comments.post.postTitle}}</p>
+         <a [routerLink]="['/post',comments.post.postId]"> <p>{{comments.comment}}</p> </a>
+          <p>{{comments.voteCount}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

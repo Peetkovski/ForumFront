@@ -1,0 +1,52 @@
+<div class="container mt-5">
+
+</div>
+
+
+<div class="card d-flex" style="padding: 20px; width: 50%; margin-left: auto; margin-right: auto  ">
+  <h4 class="text-center">{{post.postTitle}}</h4>
+  <div style="text-align: right">
+  <p>Author: <a class="" style="text-align: right;" [routerLink]="['/user/', post.user.userName]">{{post.user.userName}} </a> </p> <img src="{{post.user.userPic}}" width="40px" height="40px" >
+  </div>
+  <p class="text-xxl-start">{{post.postDescription}}</p>
+  <p *ngIf="post.voteCount > 0" style="color: green">Votes: {{post.voteCount}}</p>
+  <p *ngIf="post.voteCount == 0" style="color: black">Votes: {{post.voteCount}}</p>
+  <p *ngIf="post.voteCount < 0" style="color: red" >Votes: {{post.voteCount}}</p>
+  <div class="social">
+    <button class="btn btn-primary mb-2" (click)="Like(post.postId)" type="button">Like</button>
+    <button class="btn btn-danger mb-2" (click)="Dislike(post.postId)" type="button">Dislike</button>
+
+    <form  #commentsForm="ngForm" (ngSubmit)="addComment(post.postId,commentsForm.value)">
+    <input
+      style="width: 50%"
+      class="mb-2"
+      ngModel
+      name="comment"
+      id="comment"
+      type="text"
+      placeholder="Add your comment!">
+      <button type="submit" style="margin-left: 3px" class="btn btn-primary">Add Comment</button>
+    </form>
+
+  </div>
+  <div class="line"></div>
+  <div class="mb-3"></div>
+
+
+  <div class="mb-1" style="width: 60%" *ngFor="let comment of comments">
+
+    <ng-container *ngIf="comment?.user?.userName">
+      <a [routerLink]="['/user/', comment.user.userName]">  {{comment.user.userName}} </a>
+    </ng-container>
+    <br>
+    {{comment.comment}}
+    <p *ngIf="comment.voteCount > 0" class="likes" style="color: green">  Likes: {{comment.voteCount}} </p>
+    <p *ngIf="comment.voteCount == 0" class="like" style="color: black"> Likes: {{comment.voteCount}} </p>
+    <p *ngIf="comment.voteCount < 0" class="likes" style="color: red"> Likes: {{comment.voteCount}} </p>
+    <a [routerLink]="['/like', comment.commentId]">  <p>like</p>  </a>
+  </div>
+</div>
+
+<div>
+</div>
+

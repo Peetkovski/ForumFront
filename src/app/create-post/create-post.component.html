@@ -1,0 +1,27 @@
+<div class="container-sm mt-5">
+  <div class="card"  style="padding: 20px">
+
+  <form #usersForm="ngForm" (ngSubmit)="savePost(usersForm.value)">
+
+    <input class="form-control" id="title" type="text" ngModel name="postTitle" placeholder="Title">
+    <br>
+    <textarea class="form-control mb-3" ngModel name="postDescription" placeholder="post Description" rows="4" cols="50">
+</textarea>
+    <br>
+    <select  class="form-control" ngModel name="category">
+      <option value="Anime">Anime</option>
+      <option value="Education">Education</option>
+      <option value="Games">Games</option>
+      <option value="Garden">Garden</option>
+      <option value="Movies">Movies</option>
+      <option value="Social">Social</option>
+      <option value="Technology">Technology</option>
+    </select>
+    <br>
+    <button class="btn btn-outline-primary form-control rounded-0">Add Post!</button>
+  </form>
+
+
+
+</div>
+</div>

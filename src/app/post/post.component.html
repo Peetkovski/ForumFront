@@ -1,0 +1,36 @@
+
+<div class="container mt-5">
+  <div class="card"  style="padding: 20px; width: 50%; margin-right: auto; margin-left: auto">
+
+    <h3 style="text-align: center">You are logged as: {{username}}</h3>
+  <a routerLink="/createPost"> <input type="text" placeholder="What's on your mind?"> </a>
+
+</div>
+
+
+
+<div *ngFor="let posts of posts" style="width: 50%" class="container mt-5 card">
+
+
+  <a  [routerLink]="['/post', posts.postId]">
+    <div>
+      <h4>{{posts.postTitle}}</h4>
+
+      <h6>Author: {{posts.user.userName}}</h6>
+
+      <p>{{posts.postDescription}}</p>
+      <p *ngIf="posts.voteCount > 0" style="color: green"> Votes: {{posts.voteCount}}</p>
+      <p *ngIf="posts.voteCount == 0" style="color: black"> Votes: {{posts.voteCount}}</p>
+      <p *ngIf="posts.voteCount < 0" style="color: red"> Votes: {{posts.voteCount}}</p>
+
+
+    </div>
+  </a>
+  <div class="mb-2">
+  <button class="btn btn-primary" (click)="Like(posts.postId)" type="button">Like</button>
+  <button class="btn btn-danger" (click)="Dislike(posts.postId)" type="button">Dislike</button>
+  </div>
+  <div>
+  </div>
+</div>
+</div>

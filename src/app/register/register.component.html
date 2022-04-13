@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <div class="card"  style="padding: 20px">
+    <form #registerForm="ngForm" (ngSubmit)="login(registerForm)">
+
+      <input type="text"
+             ngModel
+             name="userName"
+             id="userName"
+             placeholder="Enter your username"
+             class="form-control mb-3"
+      >
+
+      <input type="password"
+             ngModel
+             name="userPassword"
+             id="userPassword"
+             placeholder="Enter your password"
+             class="form-control mb-3"
+      >
+      <input type="text"
+             ngModel
+             name="userPic"
+             id="userPic"
+             placeholder="Enter your profile pic"
+             class="form-control mb-3"
+      >
+      <input type="text"
+             ngModel
+             name="userEmail"
+             id="userEmail"
+             placeholder="Enter your email"
+             class="form-control mb-3"
+      >
+
+      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" ngModel name="gender" id="gender" >
+        <option selected>Open this select menu</option>
+        <option value="MALE">male</option>
+        <option value="FEMALE">female</option>
+        <option value="UNKNOWN">Unknown</option>
+      </select>
+
+      <input type="submit"
+             value="Register"
+             class="btn btn-outline-primary form-control rounded-0">
+    </form>
+  </div>
+</div>
