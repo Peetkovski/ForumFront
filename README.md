@@ -1,27 +1,21 @@
-# TokenNauka
+# This is front of my Forum application. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
-## Development server
+### Register 
+![register](https://user-images.githubusercontent.com/58399828/163263727-1c1b8588-a8f9-4a1b-b56f-deec15bd76e8.PNG)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Login
+![login](https://user-images.githubusercontent.com/58399828/163263718-ed25a094-21a9-49eb-b214-2e120dff09b9.PNG)
 
-## Code scaffolding
+### Home page
+![homePage](https://user-images.githubusercontent.com/58399828/163263715-3ac13d05-3f5e-4b39-ac77-0202713ef4f6.PNG)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Adding post
+![addPost](https://user-images.githubusercontent.com/58399828/163263713-2b96c0aa-d88c-4ba1-bdc6-2b2f021abee4.PNG)
+### Post description
+![post](https://user-images.githubusercontent.com/58399828/163263720-824618d2-2d1c-48de-bffb-e278a9927d4c.PNG)
+### Newest posts
+![posts](https://user-images.githubusercontent.com/58399828/163263722-3796ee9f-d261-4589-bc43-849b0886e157.PNG)
+### Profile of user
+#### We can find here posts written by user and comments
+![profile](https://user-images.githubusercontent.com/58399828/163263724-525001f3-f7a4-411e-b67a-d4ef4f974b48.PNG)
