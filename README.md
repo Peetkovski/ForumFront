@@ -1,5 +1,6 @@
-# This is Frontend of my Forum application. 
-## Backend of my Forum app: https://github.com/Peetkovski/ForumBackend
+# Frontend of my Forum application. 
+## Backend of my Forum app
+https://github.com/Peetkovski/ForumBackend
 
 
 ### Register 
