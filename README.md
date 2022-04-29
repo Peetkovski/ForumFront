@@ -3,6 +3,9 @@
 https://github.com/Peetkovski/ForumBackend
 
 
+
+## Realease 1.0
+
 ### Register 
 ![register](https://user-images.githubusercontent.com/58399828/163263727-1c1b8588-a8f9-4a1b-b56f-deec15bd76e8.PNG)
 
